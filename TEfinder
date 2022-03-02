@@ -209,7 +209,8 @@ printf "%s\t"  "track name=TEfinder" "type=bedDetail" "description=FR:forward re
 printf "\n" >> ${workingdir}/${outname}TEinsertions.bed
 
 # create fasta index (fai) file
-cp $fa ${workingdir}/reference.fa
+#cp $fa ${workingdir}/reference.fa
+ln -s $fa ${workingdir}/reference.fa
 samtools faidx ${workingdir}/reference.fa
 
 # sort alignment input
